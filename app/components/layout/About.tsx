@@ -28,7 +28,7 @@ export default function About() {
                     className="text-base md:text-xl lg:text-2xl text-neutral-400 font-medium leading-relaxed tracking-tight"
                 >
                     Hello, I’m{' '}
-                    <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-cyan-400 drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] lg:drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                    <span className="font-extrabold text-transparent bg-clip-text bg-linear-to-r from-white via-neutral-200 to-cyan-400 drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] lg:drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                         AKDIL ASCENDO
                     </span>
                     . I specialize in developing{' '}
@@ -44,7 +44,7 @@ export default function About() {
                 </motion.p>
 
             </motion.div>
-         <div className="w-full h-[400px] relative">
+         <div className="w-full h-100 relative">
   <Canvas>
     <ambientLight intensity={3.5} />
     <directionalLight position={[5, 5, 5]} intensity={2.5} />
