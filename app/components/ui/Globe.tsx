@@ -15,8 +15,11 @@ type GLTFResult = GLTF & {
 }
 
 export function Model(props: React.ComponentProps<'group'>) {
+  // Загружаем gltf из корня public
   const { nodes } = useGLTF('/scene.gltf') as unknown as GLTFResult
-  const earthTexture = useTexture('/textures/Material.002_diffuse.jpeg')
+  
+  // Явно указываем абсолютный URL для текстуры, чтобы Vercel не терял ее при деплое
+  const earthTexture = useTexture('./textures/Material.002_diffuse.jpeg')
   earthTexture.flipY = false
 
   return (
@@ -28,6 +31,7 @@ export function Model(props: React.ComponentProps<'group'>) {
         rotation={[-Math.PI / 2, 0, 0]}
         scale={100}
       >
+        {/* Используем meshBasicMaterial, чтобы планета светилась сама на сервере */}
         <meshBasicMaterial map={earthTexture} />
       </mesh>
     </group>
@@ -35,4 +39,4 @@ export function Model(props: React.ComponentProps<'group'>) {
 }
 
 useGLTF.preload('/scene.gltf')
-useTexture.preload('/textures/Material.002_diffuse.jpeg')
+useTexture.preload('./textures/Material.002_diffuse.jpeg')
