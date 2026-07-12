@@ -4,12 +4,10 @@ import { OrbitControls } from '@react-three/drei'
 import { Model } from '../ui/Globe'
 export default function About() {
     return (
-        <section className="flex flex-col lg:flex-row h-auto py-10 px-6 md:px-16 items-center justify-center gap-10">
+        <section className="flex flex-col z-13 lg:flex-row h-auto py-10 px-6 md:px-16 items-center justify-center gap-10">
 
-            {/* ЛЕВАЯ ЧАСТЬ: ТЕКСТ */}
-            {/* w-full на мобилке, w-1/2 на десктопе. Высота h-auto на мобилке, чтобы текст не обрезался */}
-            <motion.div className="overflow-hidden select-none bg-black flex flex-col justify-center gap-4 w-full lg:w-1/2 h-auto ">
-                {/* 💻 На ПК анимируется, 📱 на телефонах появляется сразу */}
+            <motion.div className="overflow-hidden select-none  flex flex-col items-center lg:items-start justify-center gap-4 w-full lg:w-1/2 h-auto text-center lg:text-left">
+                
                 <motion.h2
                     initial={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -34,25 +32,25 @@ export default function About() {
                     . I specialize in developing{' '}
                     <span className="text-white font-semibold">performant, pixel-perfect</span> web
                     applications using modern React ecosystems. My architecture is clean, my code
-                    is <span className="text-cyan-400 font-mono text-base md:text-lg lg:text-xl inline-block">strongly typed</span>, and my
-                    animations are always purposeful. I approach development as a synthesis of
-                    technical problem-solving and{' '}
+                    is <span className="text-cyan-400 font-mono text-base md:text-lg lg:text-xl inline-block">strongly typed</span>.
+                    {' '}<br></br>
                     <span className="text-white italic underline decoration-cyan-500/50 underline-offset-4">
-                        visual storytelling
+                        Available worldwide
                     </span>
 
                 </motion.p>
 
             </motion.div>
-         <div className="w-full h-100 relative">
-  <Canvas>
-    <ambientLight intensity={3.5} />
-    <directionalLight position={[5, 5, 5]} intensity={2.5} />
-    <directionalLight position={[-5, -3, -5]} intensity={1.5} />
-    <Model scale={0.015} position={[0, 0, 0]} />
-    <OrbitControls enableZoom={true} autoRotate={true} autoRotateSpeed={0.5} />
-  </Canvas>
-</div>
+
+            <div className="w-full h-100 relative">
+                <Canvas>
+                    <ambientLight intensity={3.5} />
+                    <directionalLight position={[5, 5, 5]} intensity={2.5} />
+                    <directionalLight position={[-5, -3, -5]} intensity={1.5} />
+                    <Model scale={0.015} position={[0, 0, 0]} />
+                    <OrbitControls enableZoom={true} autoRotate={true} autoRotateSpeed={0.5} />
+                </Canvas>
+            </div>
 
 
 
