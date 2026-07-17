@@ -145,7 +145,7 @@ export default function Home() {
               </p>
 
               <a
-                href="https://t.me"
+                href="https://t.me/Afroner"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-white shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all hover:scale-[1.02] active:scale-95"
