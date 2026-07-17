@@ -31,40 +31,36 @@ const containerVariants: Variants = {
 
 const cardVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { duration: 0.4, ease: "easeOut" } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.4, ease: "easeOut" }
     }
 };
 
 export default function SkillsSection() {
     return (
-        <section id="skills" className="relative py-20 mb-40 overflow-hidden w-full select-none">
-            
-            {/* ФОНОВЫЙ НЕОНОВЫЙ БЛИК */}
+        <section id="skills" className="relative py-20 px-6 overflow-hidden w-full select-none">
+
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
-            {/* Заголовок */}
             <div className="max-w-6xl mx-auto px-6 mb-12 z-10 relative">
                 <div className="flex flex-col gap-1 w-fit">
                     <span className="text-[10px] font-mono tracking-[0.25em] text-cyan-400 uppercase">
                         // TECH STACK
                     </span>
                     <h2 className="text-xl md:text-2xl font-black tracking-tight text-white uppercase">
-                    MY SKILLS
+                        MY SKILLS
                     </h2>
                     <div className="w-full h-[2px] bg-cyan-500 mt-2 shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
                 </div>
             </div>
 
-            {/* Сетка карточек */}
             <div className="w-full max-w-6xl mx-auto px-6 z-10 relative">
-                {/* Исправлен грид: на десктопе жестко grid-cols-4, на больших экранах grid-cols-8 без сбоев */}
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
-                    animate="visible" // Заменили whileInView на animate, чтобы карточки рендерились СРАЗУ
+                    animate="visible"
                     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4"
                 >
                     {skills.map((skill) => (
@@ -81,7 +77,7 @@ export default function SkillsSection() {
                                     className="w-12 h-12 object-contain filter drop-shadow-[0_0_8px_rgba(6,182,212,0.2)] group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(6,182,212,0.6)] group-active:scale-105 transition-all duration-300"
                                 />
                             </div>
-                            
+
                             <span className="text-neutral-400 group-hover:text-white font-mono text-xs font-semibold tracking-wide text-center px-1 transition-colors duration-300">
                                 {skill.name}
                             </span>
@@ -92,4 +88,3 @@ export default function SkillsSection() {
         </section>
     );
 }
-
