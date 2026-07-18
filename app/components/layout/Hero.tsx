@@ -9,7 +9,7 @@ export default function HeroSection() {
       className="relative h-auto w-full md:mt-24 mt-40 flex flex-col justify-center px-6 md:px-16 overflow-hidden select-none"
     >
       {/* ДИЗАЙНЕРСКИЙ НЕОНОВЫЙ БЭКГРАУНД-БЛИК (Мягкое свечение позади текста) */}
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-cyan-500/10 rounded-full blur-[80px] md:blur-[150px] pointer-events-none z-0" />
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px]   pointer-events-none z-0" />
 
       {/* КОНТЕЙНЕР ДЛЯ ТЕКСТА */}
       <div className="flex flex-col font-sans uppercase font-black tracking-tighter leading-[0.82] text-5xl sm:text-7xl md:text-8xl lg:text-[9.5vw] max-w-7xl z-10">
@@ -53,7 +53,7 @@ export default function HeroSection() {
   
 
       
-      <div className="w-full h-[1px] bg-gradient-to-r my-25 from-cyan-500/50 via-neutral-800 to-transparent shadow-[0_1px_10px_rgba(6,182,212,0.2)]" />
+      <div className="w-full h-[1px]  my-25 " />
     </section>
   );
 }
