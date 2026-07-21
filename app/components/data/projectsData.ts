@@ -37,7 +37,7 @@ export const projectsData: Project[]=[
         title:'Repair Tech',
         description:'Styled buisness page',
          technologies: ["React", "TypeScript", "Tailwind CSS"],
-         image:'/projects/repaiTech.png',
+         image:'/projects/RepaiTech.png',
          link:"https://repair-landing-sage.vercel.app"
     },
     {
